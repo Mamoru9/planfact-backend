@@ -10,6 +10,7 @@ namespace Backend.Controllers
 {
     public class ProcedureController : ApiController
     {
+        //Получает сумму заказов со статусом выполнен по каждому клиенту, произведённых в день рождения клиента
         //GET: api/Procedure/sum
         [ResponseType(typeof(SumInBirthday_Result))]
         [Route("api/Procedure/sum")]
@@ -26,6 +27,7 @@ namespace Backend.Controllers
             }
         }
 
+        //Получает список часов от 00:00 до 24:00 в порядке убывания со средним чеком за каждый час
         //GET: api/Procedure/AvrSum/26/11/1999
         [ResponseType(typeof(AverageSum_Result))]
         [Route("api/Procedure/AvrSum/{dd:int}/{mm:int}/{yy:int}")]
